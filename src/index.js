@@ -1,23 +1,17 @@
 import React from "react";
+import SiteHeader from './components/siteHeader'
 import ReactDOM from "react-dom";
 import MovieReviewPage from "./pages/movieReviewPage";
-import { BrowserRouter, Route, Navigate, Routes, Link } from "react-router-dom";
+import { BrowserRouter, Route, Navigate, Routes} from "react-router-dom";
 import HomePage from "./pages/homePage";
 import MoviePage from "./pages/movieDetailsPage";
 import FavouriteMoviesPage from "./pages/favouriteMoviesPage"; // NEW
 
 const App = () => {
   return (
-    <BrowserRouter>
-      <ul>
-        <li>
-          <Link to="/">Home</Link>
-        </li>
-        <li>
-          <Link to="/movies/favourites">Favourites</Link>
-        </li>
-      </ul>
-      <Routes>
+      <BrowserRouter>
+          <SiteHeader />      {/* New Header  */}
+          <Routes>
         <Route path="/movies/favourites" element={<FavouriteMoviesPage/>}
         />
         <Route path="/movies/:id" element={<MoviePage/>} />
