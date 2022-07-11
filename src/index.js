@@ -7,6 +7,7 @@ import UpcomingMoviesPage from "./pages/UpcomingMoviesPage";
 import MovieReviewPage from "./pages/movieReviewPage";
 import { BrowserRouter, Route, Navigate, Routes} from "react-router-dom";
 import HomePage from "./pages/homePage";
+import MoviesContextProvider from "./contexts/moviesContext";
 import MoviePage from "./pages/movieDetailsPage";
 import FavouriteMoviesPage from "./pages/favouriteMoviesPage"; // NEW
 
@@ -24,7 +25,8 @@ const App = () => {
   return (
     <QueryClientProvider client={queryClient}>
       <BrowserRouter>
-          <SiteHeader />      {/* New Header  */}
+        <SiteHeader />
+        <MoviesContextProvider>
           <Routes>
         <Route path="/movies/favourites" element={<FavouriteMoviesPage/>}
         />
@@ -33,7 +35,8 @@ const App = () => {
         <Route path="/" element={<HomePage />} />
         <Route path="/reviews/:id" element={<MovieReviewPage/>} />
         <Route path="*" element={<Navigate to="/" replace />} />
-      </Routes>
+        </Routes>
+        </MoviesContextProvider>
       </BrowserRouter>
       <ReactQueryDevtools initialIsOpen={false} />
     </QueryClientProvider>
