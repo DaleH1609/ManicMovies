@@ -8,6 +8,7 @@ import MovieReviewPage from "./pages/movieReviewPage";
 import { BrowserRouter, Route, Navigate, Routes} from "react-router-dom";
 import HomePage from "./pages/homePage";
 import MoviesContextProvider from "./contexts/moviesContext";
+import PopularActorsPage from "./pages/popularActorsPage.js";
 import MoviePage from "./pages/movieDetailsPage";
 import FavouriteMoviesPage from "./pages/favouriteMoviesPage"; // NEW
 import AddMovieReviewPage from './pages/addMovieReviewPage'
@@ -29,11 +30,11 @@ const App = () => {
         <SiteHeader />
         <MoviesContextProvider>
           <Routes>
-        <Route path="/movies/favourites" element={<FavouriteMoviesPage/>}
-        />
+        <Route path="/movies/favourites" element={<FavouriteMoviesPage/>} />
         <Route path="/movies/upcoming" element={<UpcomingMoviesPage/>} />
         <Route path="/movies/:id" element={<MoviePage/>} />
         <Route path="/reviews/form" element={<AddMovieReviewPage/>} />
+        <Route path="/actors/popular" element={<PopularActorsPage />} />
         <Route path="/" element={<HomePage />} />
         <Route path="/reviews/:id" element={<MovieReviewPage/>} />
         <Route path="*" element={<Navigate to="/" replace />} />
