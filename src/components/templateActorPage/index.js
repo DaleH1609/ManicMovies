@@ -25,10 +25,7 @@ const useStyles = makeStyles((theme) => ({
 
 const TemplateActorPage = ({ actor, children }) => {
   const classes = useStyles();
-  const { data, error, isLoading, isError } = useQuery(
-    ['images', { id: actor.id }],
-    getActorImages
-  );
+  const { data, error, isLoading, isError } = useQuery(['images', { id: actor.id }], getActorImages);
   console.log(actor.id);
 
   if (isLoading) {

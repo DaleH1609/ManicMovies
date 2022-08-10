@@ -9,6 +9,7 @@ import { BrowserRouter, Route, Navigate, Routes} from "react-router-dom";
 import HomePage from "./pages/homePage";
 import MoviesContextProvider from "./contexts/moviesContext";
 import PopularActorsPage from "./pages/popularActorsPage.js";
+import ActorsDetailsPage from "./pages/actorsDetailsPage.js";
 import MoviePage from "./pages/movieDetailsPage";
 import FavouriteMoviesPage from "./pages/favouriteMoviesPage"; // NEW
 import AddMovieReviewPage from './pages/addMovieReviewPage'
@@ -35,6 +36,7 @@ const App = () => {
         <Route path="/movies/:id" element={<MoviePage/>} />
         <Route path="/reviews/form" element={<AddMovieReviewPage/>} />
         <Route path="/actors/popular" element={<PopularActorsPage />} />
+        <Route path="/actors/:id" element={<ActorsDetailsPage/>} />
         <Route path="/" element={<HomePage />} />
         <Route path="/reviews/:id" element={<MovieReviewPage/>} />
         <Route path="*" element={<Navigate to="/" replace />} />

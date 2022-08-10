@@ -1,7 +1,10 @@
 import React, { useState } from "react";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
-
+import NavigationIcon from "@material-ui/icons/Navigation";
+import Fab from "@material-ui/core/Fab";
+import Drawer from "@material-ui/core/Drawer";
+import MovieReviews from '../movieReviews'
 
 const useStyles = makeStyles((theme) => ({
   chipRoot: {
@@ -33,7 +36,8 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const ActorDetails = ( {actors }) => {
+const ActorDetails = ( {actors}) => {
+    
 
   return (
     <>
@@ -42,10 +46,10 @@ const ActorDetails = ( {actors }) => {
       </Typography>
 
       <Typography variant="h6" component="p">
-        {actors.biography}
-        {actors.birthday}
+        {actors.name}
       </Typography>
+      
     </>
   );
 };
-export default  ActorDetails ;
+export default ActorDetails ;

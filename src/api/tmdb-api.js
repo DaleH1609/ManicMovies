@@ -118,12 +118,11 @@ export const getMovie = (args) => {
       });
     };
 
-  export const getActor = (args) => {
-    console.log(args)
+  export const getActorBio = (args) => {
    const [, idPart] = args.queryKey;
-   const { person_id } = idPart;
+   const { id } = idPart;
    return fetch(
-     `https://api.themoviedb.org/3/person/${person_id}?api_key=${process.env.REACT_APP_TMDB_KEY}`
+     `https://api.themoviedb.org/3/person/${id}?api_key=${process.env.REACT_APP_TMDB_KEY}`
    ).then((response) => {
      if (!response.ok) {
        throw new Error(response.json().message);
@@ -167,7 +166,6 @@ export const getMovie = (args) => {
   };
 
   export const getSeries = (args) => {
-    console.log(args)
    const [, idPart] = args.queryKey;
    const { id } = idPart;
    return fetch(
