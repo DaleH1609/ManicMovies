@@ -23,10 +23,10 @@ const useStyles = makeStyles((theme) => ({
   },
 }));
 
-const TemplateActorPage = ({ actor, children }) => {
+const TemplateActorPage = ({ actors, children }) => {
   const classes = useStyles();
-  const { data, error, isLoading, isError } = useQuery(['images', { id: actor.id }], getActorImages);
-  console.log(actor.id);
+  const { data, error, isLoading, isError } = useQuery(['images', { id: actors.id }], getActorImages);
+  console.log(actors.id);
 
   if (isLoading) {
     return <Spinner />;
@@ -40,7 +40,7 @@ const TemplateActorPage = ({ actor, children }) => {
 
   return (
     <div className={classes.root}>
-      <ActorHeader movie={actor} />
+      <ActorHeader movie={actors} />
       <Grid container spacing={5} style={{ padding: '15px' }}>
         <Grid item xs={3}>
           <div className={classes.imageListRoot}>
