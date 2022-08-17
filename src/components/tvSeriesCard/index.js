@@ -38,7 +38,7 @@ export default function TVSeriesCard({ tvSeries }) {
         className={classes.media}
         image={
           tvSeries.poster_path
-            ? `https://image.tmdb.org/t/p/w500/${actors.poster_path}`
+            ? `https://image.tmdb.org/t/p/w500/${tvSeries.poster_path}`
             : `${process.env.PUBLIC_URL}/assets/film-poster-placeholder.png`
         }
       />

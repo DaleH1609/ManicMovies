@@ -1,5 +1,5 @@
 import React from "react";
-import ActorsListPageTemplate from "../components/templateActorListPage";
+import PageTemplate from "../components/templateActorListPage";
 import { useQuery } from 'react-query';
 import Spinner from '../components/spinner';
 import { getPopularActors } from "../api/tmdb-api";
@@ -23,7 +23,7 @@ const { data, error, isLoading, isError } = useQuery('actors', getPopularActors,
   localStorage.setItem('favouriteActors', JSON.stringify(favouriteActors))
 
   return (
-    <ActorsListPageTemplate
+    <PageTemplate
       title='Popular Actors'
       actors={actors}
       action={(actor) => {

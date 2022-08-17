@@ -40,7 +40,7 @@ const TemplateActorPage = ({ actors, children }) => {
 
   return (
     <div className={classes.root}>
-      <ActorHeader movie={actors} />
+      <ActorHeader actors={actors} />
       <Grid container spacing={5} style={{ padding: '15px' }}>
         <Grid item xs={3}>
           <div className={classes.imageListRoot}>
