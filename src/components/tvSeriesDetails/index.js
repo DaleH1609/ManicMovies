@@ -65,14 +65,10 @@ const TVSeriesDetails = ( { tvSeries }) => {
       <Paper component="ul" className={classes.chipSet}>
         <Chip icon={<AccessTimeIcon />} label={`${tvSeries.episode_run_time} min.`} />
         <Chip
-          icon={<MonetizationIcon />}
-          label={`${tvSeries.revenue.toLocaleString()}`}
-        />
-        <Chip
           icon={<StarRate />}
           label={`${tvSeries.vote_average} (${tvSeries.vote_count}`}
         />
-        <Chip label={`First Aired: ${tvSeries.first_ar_date}`} />
+        <Chip label={`First Aired: ${tvSeries.first_air_date}`} />
       </Paper>
       <Paper component="ul" className={classes.chipSet}>
         <li>
@@ -83,4 +79,4 @@ const TVSeriesDetails = ( { tvSeries }) => {
       </>
   );
 };
-export default  TVSeriesDetails ;
+export default  TVSeriesDetails;

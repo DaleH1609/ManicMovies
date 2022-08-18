@@ -10,6 +10,7 @@ import HomePage from "./pages/homePage";
 import MoviesContextProvider from "./contexts/moviesContext";
 import PopularActorsPage from "./pages/popularActorsPage.js";
 import ActorsDetailsPage from "./pages/actorsDetailsPage.js";
+import TVSeriesDetailsPage from "./pages/tvSeriesDetailsPage.js";
 import MoviePage from "./pages/movieDetailsPage";
 import FavouriteMoviesPage from "./pages/favouriteMoviesPage"; // NEW
 import AddMovieReviewPage from './pages/addMovieReviewPage'
@@ -39,7 +40,8 @@ const App = () => {
         <Route path="/actors/popular" element={<PopularActorsPage />} />
         <Route path="/actors/:id" element={<ActorsDetailsPage/>} />
         <Route path="/" element={<HomePage />} />
-        <Route path='/tvSeries/popular' element={<PopularTVSeriesPage/>} /> 
+        <Route path='/tvseries/popular' element={<PopularTVSeriesPage/>} /> 
+        <Route path='/tvseries/:id' element={<TVSeriesDetailsPage/>} /> 
         <Route path="/reviews/:id" element={<MovieReviewPage/>} />
         <Route path="*" element={<Navigate to="/" replace />} />
         </Routes>

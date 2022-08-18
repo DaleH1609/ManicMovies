@@ -165,7 +165,7 @@ export const getMovie = (args) => {
    });
   };
 
-  export const getSeries = (args) => {
+  export const getSeriesDetails = (args) => {
    const [, idPart] = args.queryKey;
    const { id } = idPart;
    return fetch(

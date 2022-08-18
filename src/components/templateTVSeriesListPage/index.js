@@ -34,7 +34,7 @@ function TVSeriesListPageTemplate({ tvSeries, title, action }) {
           <Header title={title} />
         </Grid>
         <Grid item container spacing={5}>
-          <TVSeriesList action={action} actors={displayedTVSeries} />
+          <TVSeriesList action={action} tvSeries={displayedTVSeries} />
         </Grid>
       </Grid>
       <Fab
