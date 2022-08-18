@@ -1,10 +1,11 @@
-import React, { useState } from "react";
+import React from "react";
 import Typography from "@material-ui/core/Typography";
+import Chip from '@material-ui/core/Chip';
 import { makeStyles } from "@material-ui/core/styles";
-import NavigationIcon from "@material-ui/icons/Navigation";
-import Fab from "@material-ui/core/Fab";
-import Drawer from "@material-ui/core/Drawer";
-import MovieReviews from '../movieReviews'
+import AccessTimeIcon from '@material-ui/icons/AccessTime';
+import Paper from '@material-ui/core/Paper';
+
+
 
 const useStyles = makeStyles((theme) => ({
   chipRoot: {
@@ -37,18 +38,24 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const ActorDetails = ( {actors}) => {
-    
+  const classes = useStyles();
 
   return (
     <>
       <Typography variant="h5" component="h3">
         Overview
       </Typography>
-
       <Typography variant="h6" component="p">
-        {actors.name}
+        {actors.biography}
       </Typography>
-      
+      <div className={classes.chipRoot}>
+        <Paper component='ul' className={classes.chipSet}>
+          <Chip
+            icon={<AccessTimeIcon />}
+            label={`Actors Birthday: ${actors.birthday}`} 
+          />
+        </Paper>
+      </div>
     </>
   );
 };
