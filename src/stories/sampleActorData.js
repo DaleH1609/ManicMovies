@@ -1,0 +1,20 @@
+export default {
+    adult: false,
+    also_known_as: [
+      "Austin Robert Butler",
+      "오스틴 버틀러",
+      "奥斯汀·巴特勒",
+    ],
+  biography: "Austin Robert Butler (born August 17, 1991) is an American actor. He began his career on television, and had a guest role in two episodes of the teen show Hannah Montana in 2006 and 2007. He had a recurring role in the television series Switched at Birth (2011–2012) and main roles in The Carrie Diaries (2013–2014) and The Shannara Chronicles (2016–2017).\n\nIn film, Butler played Tex Watson in Quentin Tarantino's Once Upon a Time in Hollywood (2019). In 2022, he gained critical acclaim for his portrayal of Elvis Presley in Baz Luhrman's musical biopic Elvis.\n\nDescription above from the Wikipedia article Austin Butler, licensed under CC-BY-SA, full list of contributors on Wikipedia.",
+  birthday: "1991-08-17",
+  deathday: null,
+  gender: 2,
+  homepage: null,
+  id: 86654,
+  imdb_id: "nm2581521",
+  known_for_department: "Acting",
+  name: "Austin Butler",
+  place_of_birth: "Anaheim, California, USA",
+  popularity: 140.533,
+  profile_path: "/zyizc36OayhIn3STXR8HXP0nnVm.jpg",
+  };
